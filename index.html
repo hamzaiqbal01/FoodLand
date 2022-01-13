@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: hsl(0, 0%, 90%);
+        box-sizing: border-box;
+    }
+    /* Navbar */
+    
+    #navbar {
+        max-width: 1920px;
+        width: 99.8%;
+        border: 1px solid transparent;
+        border-bottom: 1px solid gray;
+        position: sticky;
+        top: 0px;
+    }
+    
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    li:nth-of-type(even) {
+        font-family: cursive;
+        color: gray;
+        text-decoration: none;
+    }
+    
+    ul li {
+        margin: 15px 10px;
+        list-style-type: none;
+    }
+    
+    li:first-child {
+        font-weight: bold;
+    }
+    
+    #som {
+        color: #090909;
+        position: relative;
+        left: 397px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* info */
+    
+    .info {
+        width: 239px;
+        text-align: center;
+        margin: auto;
+        margin-top: 60px;
+    }
+    
+    .container {
+        width: 34vw;
+        margin: auto;
+        margin-top: 54px;
+    }
+    
+    label {
+        display: block;
+        font-size: 13px;
+        margin-top: 21px;
+        padding-bottom: 3px;
+        font-weight: bold;
+        font-family: system-ui;
+        color: #535353;
+    }
+    
+    input {
+        width: 500px;
+        padding: 11px 8px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        background-color: white;
+    }
+    
+    .infoHead {
+        margin-top: 18px;
+    }
+    
+    .first_name,
+    .last_name {
+        width: 256px;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+    
+    .first_name input {
+        width: 235px;
+    }
+    
+    .last_name input {
+        width: 235px;
+    }
+    
+    button {
+        border: none;
+        padding: 6px 23px;
+        border-radius: 6px;
+        background: rgb(22 54 144 / 90%);
+        color: white;
+        width: 82px;
+        height: 37px;
+        margin: auto;
+        display: block;
+        margin-top: 32px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+    }
+    
+    button>a {
+        text-decoration: none;
+        color: white;
+        background-color: transparent;
+    }
+    
+    button:hover {
+        transform: scale(0.9);
+        box-shadow: 0px 0px 3px 1px blue;
+    }
+    
+    p {
+        width: 236px;
+        margin: auto;
+        margin-top: 16px;
+        font-size: 14px;
+    }
+    
+    span {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li class="items">
+                info
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Cuisine
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Menu
+            </li>
+            <li class="items">
+                >
+
+            </li>
+            <li class="items">
+                Items
+            </li>
+            <li class="items">
+                >
+
+            </li>
+            <li class="items">
+                Modifier
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Confirm
+            </li>
+            <li id="som">
+                Talk To somone
+            </li>
+        </ul>
+    </nav>
+
+    <!-- info Section -->
+
+    <div class="info">
+        <h2>Tell us a little
+            <br> more about you
+        </h2>
+    </div>
+
+    <!-- Form -->
+
+    <div class="container">
+        <form action="">
+            <h3>Your Business</h3>
+            <label for="">Business Name</label>
+            <input type="text" placeholder="Enter the businness name">
+            <label for="">Street Adress</label>
+            <input type="text" placeholder="Enter the businness name">
+            <h3 class="infoHead">Your Information</h3>
+            <label for="">Email</label>
+            <input type="Email" placeholder="xyz@gmail.com">
+            <div class="first_name">
+                <label for="">First Name</label>
+                <input type="text" placeholder="First Name" class="fname">
+            </div>
+            <div class="last_name">
+                <label for="">Lats Name</label>
+                <input type="text" placeholder="last name" class="lname">
+            </div>
+            <label for="">Phone Number</label>
+            <input type="number" placeholder="+923..........">
+            <button> <a href="cusinie.html">Next</a> </button>
+            <p>Need more info? <span> Set up a Phone call <span></p>
+    </div>
+    </form>
+
+
+</body>
+
+</html>

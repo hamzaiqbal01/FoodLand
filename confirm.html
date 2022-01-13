@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Order</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: hsl(0, 0%, 90%);
+            box-sizing: border-box;
+        }
+        /* Navbar */
+        
+        #navbar {
+            max-width: 1920px;
+            width: 99.8%;
+            border: 1px solid transparent;
+            border-bottom: 1px solid gray;
+            position: sticky;
+            top: 0px;
+        }
+        
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        li:nth-of-type(odd) {
+            font-family: cursive;
+            color: gray;
+        }
+        
+        ul li {
+            margin: 15px 10px;
+            list-style-type: none;
+            text-decoration: none;
+            color: black;
+        }
+        
+        #back {
+            position: relative;
+            left: -383px;
+            color: black;
+            font-weight: bold;
+        }
+        
+        #back a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        li:nth-child(2) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(4) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(6) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(8) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(10) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(12) {
+            font-weight: bold;
+        }
+        
+        #som {
+            color: #090909;
+            position: relative;
+            left: 397px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Page head */
+        
+        .confirmation_head {
+            width: 274px;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            line-height: 36px;
+        }
+        
+        .confirmation_head>p {
+            color: gray;
+            font-size: 12px;
+            font-style: italic;
+        }
+        /* Snap of order */
+        
+        .container {
+            width: 43vw;
+            height: 58vh;
+            padding: 19px;
+            margin: auto;
+            margin-top: 36px;
+            background: white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 33px 1fr 1fr;
+            font-family: 'Georama', sans-serif;
+            border-radius: 14px;
+            box-shadow: 0px 0px 5px 0px #b7b4b4;
+        }
+        
+        .selection {
+            display: flex;
+            grid-column: 1 / span 2;
+            background-color: white;
+            font-family: 'Georama', sans-serif;
+        }
+        
+        .selection img {
+            width: 129px;
+            height: 91px;
+            border-radius: 10px;
+        }
+        
+        .selection span {
+            background-color: white;
+            margin: 28px 43px;
+            font-family: unset;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 1px 1px 3px grey;
+        }
+        
+        .popular_items {
+            grid-column: 1 / span 2;
+            background-color: white;
+            border: 1px solid transparent;
+            border-bottom: 1px solid gray;
+        }
+        
+        h5 {
+            background-color: white;
+            margin-top: 15px;
+            font-family: 'Georama', sans-serif;
+        }
+        
+        .wing {
+            background-color: white;
+            padding: 10px;
+        }
+        
+        .wing h6 {
+            background-color: white;
+            font-size: 14px;
+            padding: 6px 0px
+        }
+        
+        .wing p {
+            color: gray;
+            background: white;
+            font-size: 12px;
+        }
+        /* Footer */
+        
+        .footer {
+            display: flex;
+            border: 1px solid transparent;
+            border-top: 1px solid #c5c5c5;
+            /* position: sticky; */
+            /* bottom: 0px; */
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            margin-top: 12px;
+        }
+        
+        .footer button {
+            border: none;
+            padding: 13px -3px;
+            margin: 1px 14px;
+            border-radius: 6px;
+            background: rgb(22 54 144 / 90%);
+            color: white;
+            width: 74px;
+            height: 32px;
+            display: inline;
+            margin-top: 7px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+        
+        .footer button>a {
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+        }
+        
+        .footer button:hover {
+            box-shadow: 0px 0px 3px 1px rgb(166, 166, 189);
+            font-size: 15px;
+        }
+        
+        .footer p {
+            width: 236px;
+            margin: auto;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        
+        .footer span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+
+            <li id="back">
+                <a href="">
+                    < </a>
+            </li>
+            <li class="items">
+                info
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Cuisine
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Menu
+            </li>
+            <li class="items">
+                >
+
+            </li>
+            <li class="items">
+                Items
+            </li>
+            <li class="items">
+                >
+
+            </li>
+            <li class="items">
+                Modifier
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Confirm
+            </li>
+            <li id="som">
+                Talk To somone
+            </li>
+        </ul>
+    </nav>
+    <div class="confirmation_head">
+        <h2> Thanks for visiting, confirm Your order?
+        </h2>
+        <p>Your order is going to place Thanks For visiting! .</p>
+    </div>
+    <div class="container">
+        <div class="selection"> <img src="imges/6a649245-384d-4b0c-b722-116fa770f027.jpg" alt="Pop wing"><span> Here is the snap of your orer, Please confirm it!</span>
+        </div>
+        <div class="popular_items">
+            <h5>Your order</h5>
+        </div>
+        <div class="wing">
+            <h6>5 wings</h6>
+            <p>5 crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>10 wings</h6>
+            <p>10 crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>20 wings</h6>
+            <p>20 crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>30 wings</h6>
+            <p>30 crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>50 wings</h6>
+            <p>50 crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="selection"> <img src="imges/hotest.jpg" alt="Pop wing"><span> Here is the snap of your orer, Please confirm it!</span>
+        </div>
+        <div class="popular_items">
+            <h5>Your order</h5>
+        </div>
+        <div class="wing">
+            <h6>5 Hot & spicy wings</h6>
+            <p>5 Hot & spicy crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>10 Hot & spicy wings</h6>
+            <p>10 crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>20 Hot & spicy wings</h6>
+            <p>20 Hot & spicy crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>30 Hot & spicy wings</h6>
+            <p>30 Hot & spicy crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+        <div class="wing">
+            <h6>50 Hot & spicy wings</h6>
+            <p>50 Hot & spicy crispy fried bone in chiken wings in your choise sause</p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <button>Cancel</button>
+        <button> <a href="modifier.html">Confirm</a> </button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: hsl(0, 0%, 90%);
+            box-sizing: border-box;
+        }
+        /* Navbar */
+        
+        #navbar {
+            max-width: 1920px;
+            width: 99.8%;
+            border: 1px solid transparent;
+            border-bottom: 1px solid gray;
+            position: sticky;
+            top: 0px;
+        }
+        
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        li:nth-of-type(odd) {
+            font-family: cursive;
+            color: gray;
+        }
+        
+        ul li {
+            margin: 15px 10px;
+            list-style-type: none;
+            text-decoration: none;
+            color: black;
+        }
+        
+        #back {
+            position: relative;
+            left: -383px;
+            color: black;
+            font-weight: bold;
+        }
+        
+        #back a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        li:nth-child(2) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(4) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(6) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(8) {
+            font-weight: bold;
+        }
+        
+        li:nth-child(10) {
+            font-weight: bold;
+        }
+        
+        #som {
+            color: #090909;
+            position: relative;
+            left: 397px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .head {
+            width: 190px;
+            text-align: center;
+            margin: auto;
+            margin-top: 27px;
+            line-height: 36px;
+            font-size: 14px;
+        }
+        
+        .head>p {
+            color: gray;
+            font-size: 13px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            width: 39vw;
+            margin: auto;
+            margin-top: 45px;
+        }
+        
+        .container .box:first-child {
+            grid-column: 1 / span 2;
+            width: 584px;
+            border: 1px solid transparent;
+            border-bottom: 1px solid gray;
+        }
+        
+        .box {
+            width: 281px;
+            height: 29px;
+            display: flex;
+        }
+        
+        .box h5 {
+            display: inline;
+        }
+        
+        .box .select {
+            margin-left: 369px;
+            font-size: 14px;
+            color: gray;
+        }
+        
+        .box img {
+            width: 41px;
+            border-radius: 5px;
+        }
+        
+        .box p {
+            font-size: 12px;
+            font-weight: bold;
+            color: gray;
+            margin: 7px 0px;
+            ;
+        }
+        
+        input[type=checkbox] {
+            margin: 6px 2px;
+        }
+        
+        .box .col-2 {
+            font-weight: bold;
+            font-size: 14px;
+            color: #5a5858;
+            margin-left: 20px;
+        }
+        
+        .box span {
+            color: gray;
+            margin: 4px 10px;
+            font-size: 15px;
+        }
+        
+        .select {
+            color: red;
+        }
+        
+        .container .select2 {
+            margin-left: 421px;
+        }
+        
+        .box:nth-of-type(odd) {
+            border: 1px solid transparent;
+            border-bottom: 1px solid rgb(210 207 207);
+        }
+        
+        .upgrade {
+            display: grid;
+            grid-gap: 10px;
+            width: 39vw;
+            margin: auto;
+            margin-top: 45px;
+            margin-bottom: 26px;
+        }
+        
+        .upgrade_items {
+            width: 392px;
+            height: 29px;
+            display: flex;
+        }
+        
+        .upgrade_items:nth-of-type(even) {
+            width: 167px;
+        }
+        
+        .upgrade_items:nth-of-type(odd) {
+            border: 1px solid transparent;
+            border-bottom: 1px solid rgb(210 207 207);
+        }
+        
+        .upgrade_items:first-child {
+            grid-column: 1 / span 2;
+            width: 586px;
+            border: 1px solid transparent;
+            border-bottom: 1px solid gray;
+            background-color: inherit;
+        }
+        
+        .upgrade_items span {
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-left: 2px;
+        }
+        
+        .upgrade_items p {
+            color: gray;
+            font-size: 14px;
+            margin: 7px 4px;
+            margin-left: 407px;
+        }
+        
+        .upgrade_items .items_txt {
+            color: #5a5858;
+        }
+        /* Footer */
+        
+        .footer {
+            border: 1px solid transparent;
+            border-top: 1px solid #c5c5c5;
+            position: sticky;
+            bottom: 0px;
+        }
+        
+        .footer button {
+            border: none;
+            padding: 6px 23px;
+            border-radius: 6px;
+            background: rgb(22 54 144 / 90%);
+            color: white;
+            width: 74px;
+            height: 32px;
+            margin: auto;
+            display: block;
+            margin-top: 7px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+        
+        .footer button>a {
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+        }
+        
+        .footer button:hover {
+            transform: scale(0.9);
+            box-shadow: 0px 0px 3px 1px blue;
+        }
+        
+        .footer p {
+            width: 236px;
+            margin: auto;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        
+        .footer span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+
+            <li id="back">
+                <a href="">
+                    < </a>
+            </li>
+            <li class="items">
+                info
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Cuisine
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Menu
+            </li>
+            <li class="items">
+                >
+
+            </li>
+            <li class="items">
+                Items
+            </li>
+            <li class="items">
+                >
+
+            </li>
+            <li class="items">
+                Modifier
+            </li>
+            <li class="items">
+                >
+            </li>
+            <li class="items">
+                Confirm
+            </li>
+            <li id="som">
+                Talk To somone
+            </li>
+        </ul>
+    </nav>
+    <div class="head">
+        <h2>Which Modifiers do You have? </h2>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h5>Chose a Wing sause</h5>
+            <span class="select">Sellect all</span>
+        </div>
+        <div class="box">
+            <p>Include In</p>
+        </div>
+        <div class="box"><input type="checkbox"><span class="col-2">Bufflo</span> </div>
+        <div class="box"> <img src="imges/6a649245-384d-4b0c-b722-116fa770f027.jpg" alt=""> <span> 5 wings</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Nashville Hot</span>
+        </div>
+        <div class="box"> <img src="imges/burger.jpg" alt=""> <span> 10 Burger</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">BBQ</span>
+        </div>
+        <div class="box"> <img src="imges/chwes.jpg" alt=""> <span> 5 Hot wings</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Hot BBQ</span>
+        </div>
+        <div class="box"> <img src="imges/fried.jpg" alt=""> <span> 5 Hot Nuget</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Honey BBQ</span>
+        </div>
+        <div class="box"> <img src="imges/hotest.jpg" alt=""> <span>5 Spicy Wings</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Garlic Parmeen </span>
+        </div>
+        <div class="box"> <img src="imges/hotter.jpg" alt=""> <span> 2 Honey wings</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Sweet & spicy</span>
+        </div>
+        <div class="box"> <img src="imges/images.jpg" alt=""> <span> 2 Family Pack</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Garlic sasame</span>
+        </div>
+        <div class="box"> <img src="imges/nugets.jpg" alt=""> <span> 5 Nugets</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Onion sasame</span>
+        </div>
+        <div class="box"> <img src="imges/6a649245-384d-4b0c-b722-116fa770f027.jpg" alt=""> <span> 20 wings</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Atomic</span>
+        </div>
+        <div class="box"> <img src="imges/shawrma.png" alt=""> <span> 5 shawrma</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Nashville Hot</span>
+        </div>
+
+    </div>
+
+
+    <!-- 2nd container -->
+    <div class="container">
+        <div class="box">
+            <h5>Extra Sause</h5>
+            <span class="select2">Sellect all</span>
+        </div>
+        <div class="box">
+            <p>Include In</p>
+        </div>
+        <div class="box"><input type="checkbox"><span class="col-2">Bufflo</span> </div>
+        <div class="box"> <img src="imges/saus1.jpg" alt=""> <span> 5 Sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Nashville Hot</span>
+        </div>
+        <div class="box"> <img src="imges/saus2.jpg" alt=""> <span> 2 Sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">BBQ</span>
+        </div>
+        <div class="box"> <img src="imges/saus3.jpg" alt=""> <span> 6 Sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Hot BBQ</span>
+        </div>
+        <div class="box"> <img src="imges/saus4.jpg" alt=""> <span> 5 chili Sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Honey BBQ</span>
+        </div>
+        <div class="box"> <img src="imges/saus5.jpg" alt=""> <span> 2 Green Sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Garlic</span>
+        </div>
+        <div class="box"> <img src="imges/saus6.jpg" alt=""> <span> 1 Ex Sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Hot & spicy</span>
+        </div>
+        <div class="box"> <img src="imges/saus7.jpg" alt=""> <span> 2 Red sause</span>
+        </div>
+        <div class="box">
+            <input type="checkbox"><span class="col-2">Onion spicy</span>
+        </div>
+        <div class="box"> <img src="imges/saus8.jpg" alt=""> <span> 1 Red</span>
+        </div>
+        <div class="box">
+            <!-- <input type="checkbox"><span class="col-2">Nashville Hot</span> -->
+        </div>
+        <div class="box"> <img src="imges/saus9.jpg" alt=""> <span> 3 Desi sause</span>
+        </div>
+        <div class="box">
+            <!-- <input type="checkbox"><span class="col-2">Nashville Hot</span> -->
+        </div>
+        <div class="box"> <img src="/imges/ssaus10.jpg" alt=""> <span> 2 Redish</span>
+        </div>
+        <div class="box">
+            <!-- <input type="checkbox"><span class="col-2">Nashville Hot</span> -->
+        </div>
+
+    </div>
+    <!-- 3rd container -->
+    <div class="upgrade">
+        <div class="upgrade_items">
+            <span>Upgrade Your Fries</span>
+            <p>Delet all</p>
+        </div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Chaies Fries</span> </div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Truffle Fries</span></div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Onion Rings</span></div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Tater Tols</span></div>
+    </div>
+    <div class="upgrade">
+        <div class="upgrade_items">
+            <span>Chose Your Wing </span>
+            <p>Delet all</p>
+        </div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Traditional</span> </div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Boneless</span></div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">Mixed</span></div>
+        <div class="upgrade_items"></div>
+        <div class="upgrade_items"><input type="checkbox"><span class="items_txt">fried</span></div>
+    </div>
+    <div class="footer">
+        <button> <a href="confirm.html">Next</a> </button>
+    </div>
+</body>
+
+</html>
+
+</html>
